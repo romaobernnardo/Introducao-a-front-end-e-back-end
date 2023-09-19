@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+function solucao(TROPOSFERA, ESTRATOSFERA, MESOSFERA, TERMOSFERA, EXOSFERA) {
+ 
+  let altitude = 85;
+  
+  const Troposfera = altitude <= 20;
+  const Estratosfera = altitude >= 20 && altitude <= 50;
+  const Mesosfera = altitude >= 50 && altitude <= 80;
+  const Termosfera = altitude >= 80 && altitude <= 450;
+  const Exosfera = altitude > 450 && altitude <= 900;
+
+  if (altitude <= 20) {    
+   return ("TROPOSFERA");
+  } else if (altitude > 20 && altitude <= 50) {
+    return ("ESTRATOSFERA");
+  } else if (altitude > 50 && altitude <= 80) {
+    return ("MESOSFERA");
+  } else if (altitude > 80 && altitude <= 450) {
+    return ("TERMOSFERA");
+  } else {
+    return ("EXOSFERA");
+  }
+}
+  document.write(solucao());
+
+</script>
